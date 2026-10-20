@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#142643">
+  <meta name="description" content="Take a photo and share it with Lauren & Casey on their wedding day.">
+  <title>Lauren & Casey's Wedding Camera</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topline"><span class="sparkle">✦</span><span>OUR WEDDING CAMERA</span><span class="sparkle">✦</span></header>
+  <main class="app">
+    <section class="hero" aria-labelledby="main-title">
+      <p class="eyebrow" id="weddingDate">NOVEMBER 7, 2026</p>
+      <h1 id="main-title">Lauren <span class="amp">&</span> Casey</h1>
+      <p class="hero-tag">The best moments are the ones we didn't see.</p>
+      <div class="hairline"></div>
+      <h2>You're our unofficial photographer.</h2>
+      <p>Capture the love, the laughter, and the questionable dance moves. We'll collect your photos in our wedding album.</p>
+    </section>
+
+    <section class="actions" aria-label="Take or select wedding pictures">
+      <button type="button" class="btn primary" id="liveCamButton"><span aria-hidden="true">📸</span> Open wedding camera</button>
+      <div class="secondaries">
+        <button type="button" class="btn secondary" id="phoneCamButton">Use phone camera</button>
+        <button type="button" class="btn secondary" id="libraryButton">Choose a photo</button>
+      </div>
+      <input id="nativeCameraInput" type="file" accept="image/*" capture="environment" hidden>
+      <input id="libraryInput" type="file" accept="image/*" multiple hidden>
+      <p class="hint">No app or login needed. Allow camera access if your phone asks.</p>
+    </section>
+
+    <section id="alerts" class="alerts" aria-live="polite" aria-atomic="false"></section>
+
+    <section class="album" aria-labelledby="album-title">
+      <div class="album-head"><div><p class="eyebrow">YOUR CONTRIBUTIONS</p><h2 id="album-title">Your photos</h2></div><span class="count" id="photoCount">0 photos</span></div>
+      <div id="emptyState" class="empty">
+        <span aria-hidden="true" class="empty-icon">♡</span>
+        <p>Your first photo goes here!</p>
+        <small>We'll save a temporary copy in this browser, then upload it to the wedding album.</small>
+      </div>
+      <div id="photoList" class="photo-list"></div>
+      <p class="safety"><strong>Keep a backup:</strong> Use <b>Save a copy</b> for photos you want on your phone. Browser storage can be cleared, and an upload isn't confirmed until you see <b>Uploaded ✓</b>. On an iPhone, use the Share menu's Save Image or Save to Files option if offered.</p>
+    </section>
+
+    <footer>WITH LOVE · LAUREN & CASEY<br><span>Made for the memories worth keeping ♡</span></footer>
+  </main>
+
+  <div class="camera-overlay hidden" id="cameraOverlay" role="dialog" aria-modal="true" aria-label="Wedding camera">
+    <div class="camera-panel">
+      <div class="camera-toolbar"><span>✦ WEDDING CAMERA</span><button type="button" class="icon-button" id="closeCamera" aria-label="Close camera">✕</button></div>
+      <div class="camera-preview"><video id="cameraVideo" autoplay muted playsinline></video><div class="camera-watermark">L ♡ C</div></div>
+      <p id="cameraError" class="camera-error" role="status"></p>
+      <div class="camera-controls"><button type="button" class="flip-button" id="flipCamera" aria-label="Switch camera">↻<small>Flip</small></button><button type="button" id="shutterButton" class="shutter" aria-label="Take a picture"><span></span></button><span class="control-spacer"></span></div>
+      <p class="camera-caption">After you snap, we'll upload automatically. Save a copy too!</p>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
