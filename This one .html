@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#142643">
+<meta name="description" content="Share and view wedding pictures from Lauren & Casey's wedding, November 7, 2026.">
+<title>Lauren & Casey | The Wedding Album</title>
+<style>
+:root{--navy:#142643;--navy2:#274368;--gold:#c2a269;--cream:#faf8f3;--paper:#fffefa;--ink:#26364b;--muted:#647284;--line:#e7e1d6;--good:#1c7356;--bad:#ad3b35}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;line-height:1.5}
+button,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.52;cursor:not-allowed}a{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #4f98d9;outline-offset:3px}
+.top{background:var(--navy);color:var(--gold);padding:12px 16px;text-align:center;font-size:.69rem;letter-spacing:.19em;font-weight:800}
+.wrap{max-width:850px;margin:auto;padding:0 17px 44px}.hero{text-align:center;padding:42px 10px 23px}.eyebrow{color:#967343;text-transform:uppercase;letter-spacing:.18em;font-size:.7rem;font-weight:800;margin:0 0 12px}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;color:var(--navy);font-weight:400}h1{font-size:clamp(2.6rem,10vw,4.7rem);letter-spacing:-.05em;line-height:1.03;margin:0 0 13px}.amp{color:var(--gold);font-style:italic;font-size:.82em}
+.hero .sub{font-family:Georgia,serif;font-size:clamp(1.04rem,3.5vw,1.28rem);font-style:italic;color:#997b4e;margin:0 0 18px}.hero .desc{margin:0 auto;color:#5c6879;max-width:540px;font-size:.96rem}.line{height:1px;background:var(--gold);width:110px;margin:22px auto}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:0 9px 30px #2433480b;padding:23px;margin:16px 0}
+.head{display:flex;align-items:end;justify-content:space-between;gap:15px;flex-wrap:wrap}.head h2{margin:2px 0 0;font-size:1.65rem}.head .eyebrow{margin:0}.explain{font-size:.88rem;color:var(--muted);margin:10px 0 18px}
+.fieldlabel{font-weight:700;font-size:.84rem;display:block;margin:10px 0 7px}input[type=text]{border:1px solid #cfcbbf;border-radius:10px;background:white;color:var(--ink);padding:12px 13px;width:100%;max-width:420px;min-height:45px}input[type=file]{display:none}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.btn{border-radius:11px;border:1px solid transparent;padding:13px 17px;min-height:48px;font-weight:750;font-size:.92rem}.primary{background:var(--navy);color:white;box-shadow:0 5px 14px #14264318}.secondary{background:white;border-color:#c8bba2;color:var(--navy)}.small{min-height:39px;padding:8px 12px;font-size:.8rem}.micro{font-size:.78rem;color:var(--muted);margin:11px 0 0}
+.queuelist{display:grid;gap:9px;margin:17px 0 0}.queueitem{display:flex;gap:11px;align-items:center;background:#f6f4ef;border:1px solid var(--line);padding:9px;border-radius:11px}.queueitem img{width:57px;height:57px;object-fit:cover;background:#e5e5df;border-radius:7px}.queuebody{min-width:0;flex:1}.queueitem strong{font-size:.78rem;display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.queueitem span{font-size:.77rem;color:var(--muted)}.queueitem .failed{color:var(--bad)}.queueitem .done{color:var(--good)}.queueitem button{background:white;border:1px solid #cec6b6;color:var(--navy);border-radius:7px;padding:7px 9px;font-size:.76rem}
+.notice{margin:13px 0 0;border:1px solid #cdd7ce;color:#356d51;background:#f0f8f1;border-radius:9px;padding:11px 12px;font-size:.85rem}.notice.warning{background:#fff8e8;border-color:#e8d8aa;color:#7a5b27}.notice.error{background:#fff2ef;border-color:#eac5bf;color:#9b3933}.hidden{display:none!important}
+.galleryHead{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin-bottom:12px}.galleryHead h2{margin:2px 0 0;font-size:1.7rem}.count{font-size:.77rem;color:var(--muted)}.empty{text-align:center;padding:36px 14px;color:var(--muted);font-size:.9rem}.empty .symbol{font-size:2.1rem;display:block;margin-bottom:8px}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.photo{min-width:0;overflow:hidden;background:#f4f1eb;border:1px solid var(--line);border-radius:11px}.photo .thumb{display:block;width:100%;aspect-ratio:1/1;background:#e4e0d6;border:0;padding:0;overflow:hidden}.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .18s}.thumb:hover img{transform:scale(1.03)}.photoMeta{display:flex;align-items:center;justify-content:space-between;gap:5px;padding:8px 9px;color:var(--muted);font-size:.73rem}.photoMeta span{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.photoMeta button{border:0;background:transparent;font-size:.72rem;color:var(--navy);font-weight:800;padding:4px;white-space:nowrap}
+.note{border-top:1px solid var(--line);padding:16px 0 3px;color:#6a7480;font-size:.78rem}.note strong{color:var(--navy)}.footer{text-align:center;font-size:.72rem;color:#a08350;letter-spacing:.09em;padding:21px 0}.footer span{display:block;font-family:Georgia,serif;font-style:italic;letter-spacing:0;color:#647284;margin-top:4px}
+.overlay{position:fixed;inset:0;background:#081325ec;z-index:10;display:flex;align-items:center;justify-content:center;padding:15px}.lightbox{max-width:850px;width:100%;max-height:94vh;display:flex;flex-direction:column;gap:11px}.lightbar{display:flex;align-items:center;justify-content:space-between;color:white;gap:15px}.lightbar span{font-size:.82rem}.close{background:#ffffff21;color:white;border:1px solid #ffffff55;border-radius:10px;padding:9px 14px}.lightbox img{display:block;max-width:100%;max-height:73vh;object-fit:contain;margin:auto;border-radius:8px}.lightactions{text-align:center;color:white;font-size:.83rem}.lightactions a{display:inline-block;background:var(--gold);color:#111c2c;text-decoration:none;padding:10px 17px;border-radius:10px;font-weight:800;margin-bottom:4px}
+@media(min-width:610px){.wrap{padding:0 27px 55px}.card{padding:28px}.gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}}
+@media(min-width:780px){.gallery{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="top">✦ &nbsp; THE AFTER-PARTY PHOTO DROP &nbsp; ✦</div>
+<main class="wrap">
+  <header class="hero">
+    <p class="eyebrow">NOVEMBER 7, 2026 · TYBEE ISLAND</p>
+    <h1>Lauren <span class="amp">&</span> Casey</h1>
+    <p class="sub">The hair was questionable. The memories aren't.</p>
+    <div class="line"></div>
+    <p class="desc">We know y'all took pictures. Now hand over the evidence. 😉 Upload your favorite moments from our wedding and browse the photos everyone else shares.</p>
+  </header>
+  <section class="card" aria-labelledby="uploadTitle">
+    <div class="head"><div><p class="eyebrow">STEP 01 · ADD THE MEMORIES</p><h2 id="uploadTitle">Share your photos</h2></div><span aria-hidden="true">📷</span></div>
+    <p class="explain">Choose photos already on your phone. Pick several at once—no account, app, or camera permission required.</p>
+    <label class="fieldlabel" for="guestName">Your name (optional)</label>
+    <input id="guestName" type="text" maxlength="40" autocomplete="name" placeholder="So we know who caught the chaos">
+    <input type="file" id="photoInput" accept="image/*,.heic,.heif" multiple>
+    <div class="actions"><button id="chooseBtn" class="btn primary" type="button">＋ Choose photos</button><button id="uploadBtn" class="btn secondary hidden" type="button">Upload selected photos</button></div>
+    <p class="micro">Select up to 30 pictures at a time. Keep this page open until they're finished uploading.</p>
+    <div id="status" aria-live="polite" aria-atomic="false"></div>
+    <div id="queue" class="queuelist" aria-live="polite"></div>
+  </section>
+  <section class="card" id="photos" aria-labelledby="galleryTitle">
+    <div class="galleryHead"><div><p class="eyebrow">STEP 02 · RELIVE IT ALL</p><h2 id="galleryTitle">The shared album</h2></div><button id="refreshBtn" class="btn secondary small" type="button">↻ Refresh photos</button></div>
+    <p class="explain">The good, the blurry, and the legendary. Tap any photo to view and save the original.</p>
+    <div id="galleryStatus" class="count" role="status">Checking for wedding photos…</div>
+    <div id="gallery" class="gallery" aria-live="polite"></div>
+    <div id="empty" class="empty hidden"><span class="symbol">✦</span>No photos to show yet.<p>Be the first to spill the photographic evidence!</p></div>
+    <p class="micro">New photos sometimes take up to a minute to appear here. Anyone who has the link can see shared photos.</p>
+  </section>
+  <p class="note"><strong>A little note:</strong> Please only share photos you're happy for our wedding guests to see. For removing something from the album, contact Lauren or Casey.</p>
+  <footer class="footer">LAUREN & CASEY · 11.07.2026 <span>Thanks for making our weirdness legally binding.</span></footer>
+</main>
+<div id="overlay" class="overlay hidden" role="dialog" aria-modal="true" aria-label="View photo">
+  <div class="lightbox">
+    <div class="lightbar"><span id="lightLabel">Wedding memory</span><button id="closeLight" class="close" type="button">✕ Close</button></div>
+    <img id="lightImage" alt="Shared wedding picture">
+    <div class="lightactions"><a id="originalLink" href="#" target="_blank" rel="noopener noreferrer">Open original photo</a><div>On iPhone, press and hold the opened image to save it to Photos.</div></div>
+  </div>
+</div>
+<script>
+'use strict';
+(() => {
+  // Public Cloudinary values from the existing wedding camera (NOT an API secret).
+  const CLOUD = 'lsxygthd';
+  const PRESET = 'lauren_casey_wedding_2026';
+  const TAG = 'lauren_casey_shared_album_2026';
+  const ROOT = `https://res.cloudinary.com/${CLOUD}`;
+  const LIST = `${ROOT}/image/list/${TAG}.json`;
+  const UPLOAD = `https://api.cloudinary.com/v1_1/${CLOUD}/image/upload`;
+  const $ = id => document.getElementById(id);
+  const queue = [];
+  let uploading = false, galleryAccessible = false, galleryAssets = [], recent = [];
+  const MAX_BATCH = 30;
+  const MAX_BYTES = 9 * 1024 * 1024; // Compress unusually large files for common free-tier upload limits.
+
+  function status(message, kind = '') {
+    const box = $('status'); box.replaceChildren();
+    if (!message) return;
+    const p = document.createElement('p'); p.className = `notice ${kind}`.trim(); p.textContent = message; box.append(p);
+  }
+  function setGalleryStatus(message) { $('galleryStatus').textContent = message; }
+  function formatSize(n) { return n >= 1024*1024 ? `${(n/(1024*1024)).toFixed(1)} MB` : `${Math.max(1,Math.round(n/1024))} KB`; }
+  function formatName(str) { return (str || '').replace(/[=|\\\r\n]/g,' ').trim().slice(0,40); }
+  function encodedId(id) { return String(id).split('/').map(encodeURIComponent).join('/'); }
+  function resourceUrl(asset, transforms = '') {
+    const v = asset.version ? `v${asset.version}/` : '';
+    const fmt = asset.format ? `.${asset.format}` : '';
+    return `${ROOT}/image/upload/${transforms ? transforms + '/' : ''}${v}${encodedId(asset.public_id)}${fmt}`;
+  }
+  function downloadUrl(asset) { return resourceUrl(asset); }
+  function thumbUrl(asset, width=720) { return resourceUrl(asset, `f_auto,q_auto,c_limit,w_${width}`); }
+  function submitControls() {
+    $('uploadBtn').classList.toggle('hidden', !queue.some(x => x.state==='ready'||x.state==='failed'));
+    $('uploadBtn').disabled = uploading;
+    $('uploadBtn').textContent = uploading ? 'Uploading…' : 'Upload selected photos';
+    $('chooseBtn').disabled = uploading;
+  }
+  function queueRender() {
+    const parent = $('queue'); parent.replaceChildren();
+    queue.forEach((item, index) => {
+      const row = document.createElement('div'); row.className='queueitem';
+      const image = document.createElement('img'); image.alt='Selected picture'; image.src=item.preview;
+      const body = document.createElement('div'); body.className='queuebody';
+      const name=document.createElement('strong'); name.textContent=item.file.name;
+      const state=document.createElement('span'); state.className=item.state==='failed'?'failed':(item.state==='done'?'done':'');
+      state.textContent=({ready:'Ready to share',sending:'Uploading…',done:'Uploaded ✓',failed:'Upload failed — tap Retry'})[item.state] || item.state;
+      const detail=document.createElement('span'); detail.textContent=' · ' + formatSize(item.file.size);
+      body.append(name,state,detail);
+      row.append(image,body);
+      if ((item.state==='ready'||item.state==='failed')&&!uploading) {
+        const remove = document.createElement('button'); remove.textContent='Remove';remove.type='button';
+        remove.onclick=()=>{URL.revokeObjectURL(item.preview);queue.splice(index,1);queueRender();};row.append(remove);
+      }
+      parent.append(row);
+    });
+    submitControls();
+  }
+  $('chooseBtn').onclick=()=>$('photoInput').click();
+  $('photoInput').onchange=e=>{
+    const files=Array.from(e.target.files||[]);e.target.value='';
+    let added=0;
+    for(const file of files) {
+      if(queue.filter(x=>x.state!=='done').length>=MAX_BATCH)break;
+      if(!file.type.startsWith('image/') && !/\.(heic|heif|jpg|jpeg|png|webp|gif|avif)$/i.test(file.name))continue;
+      queue.push({file, preview:URL.createObjectURL(file), state:'ready'});added++;
+    }
+    status(added?`${added} photo${added===1?'':'s'} selected. Tap “Upload selected photos” when ready.`:'No supported photos selected.',added?'':'warning');
+    if(added<files.length) status(`Selected ${added} photos. Add up to ${MAX_BATCH} at a time; unsupported files were skipped.`,'warning');
+    queueRender();
+  };
+  function canvasBlob(canvas, type, quality) {return new Promise((resolve,reject)=>canvas.toBlob(blob=>blob?resolve(blob):reject(new Error('Could not resize photo.')),type,quality));}
+  async function maybeShrink(file) {
+    if(file.size<=MAX_BYTES)return file;
+    const loaded = await new Promise((resolve,reject)=>{
+      const img=new Image(), url=URL.createObjectURL(file);
+      img.onload=()=>{URL.revokeObjectURL(url);resolve(img)};
+      img.onerror=()=>{URL.revokeObjectURL(url);reject(new Error('This large photo could not be resized on your phone. Try a smaller version.'))};
+      img.src=url;
+    });
+    const scale=Math.min(1,3000/Math.max(loaded.naturalWidth,loaded.naturalHeight));
+    const canvas=document.createElement('canvas'); canvas.width=Math.max(1,Math.round(loaded.naturalWidth*scale));canvas.height=Math.max(1,Math.round(loaded.naturalHeight*scale));
+    canvas.getContext('2d').drawImage(loaded,0,0,canvas.width,canvas.height);
+    const blob=await canvasBlob(canvas,'image/jpeg',.87);
+    if(blob.size>MAX_BYTES)throw new Error('This picture is too large. Try a smaller photo or screenshot.');
+    return new File([blob],file.name.replace(/\.[^.]+$/,'')+'.jpg',{type:'image/jpeg'});
+  }
+  async function uploadOne(item, who) {
+    item.state='sending';queueRender();
+    const file=await maybeShrink(item.file);
+    const form=new FormData();form.append('file',file,file.name);
+    form.append('upload_preset',PRESET);
+    form.append('tags',TAG);
+    if(who)form.append('context',`photographer=${formatName(who)}`);
+    const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),90000);
+    try {
+      const resp=await fetch(UPLOAD,{method:'POST',body:form,signal:controller.signal});
+      const payload=await resp.json().catch(()=>({}));
+      if(!resp.ok||!payload.secure_url)throw new Error(String(payload?.error?.message||`Upload returned ${resp.status}`).slice(0,160));
+      recent.unshift({public_id:payload.public_id,version:payload.version,format:payload.format,created_at:payload.created_at,context:{custom:{photographer:who}}});
+      item.state='done';return true;
+    } finally {clearTimeout(timer);}
+  }
+  $('uploadBtn').onclick=async()=>{
+    if(uploading)return;
+    const batch=queue.filter(x=>x.state==='ready'||x.state==='failed');if(!batch.length)return;
+    uploading=true;submitControls();
+    const who=formatName($('guestName').value);
+    let successes=0;
+    for(let i=0;i<batch.length;i++) {
+      const item=batch[i];status(`Uploading photo ${i+1} of ${batch.length}… Please keep this tab open.`);
+      try {await uploadOne(item,who);successes++;}
+      catch(err) {item.state='failed';item.error=err.name==='AbortError'?'Upload timed out.':String(err.message||'Check your internet connection.');}
+      queueRender();
+    }
+    uploading=false;queueRender();
+    const failed=batch.length-successes;
+    status(failed?`${successes} uploaded, ${failed} failed. You can retry the failed photos. First error: ${batch.find(x=>x.state==='failed')?.error||'Upload error'}`:`Success! ${successes} photo${successes===1?'':'s'} saved to the wedding album. They can take up to a minute to appear below.`,failed?'error':'');
+    if(successes){ $('photos').scrollIntoView({behavior:'smooth',block:'start'}); await loadGallery(); }
+  };
+  window.addEventListener('beforeunload',e=>{if(uploading){e.preventDefault();e.returnValue='';}});
+
+  function viewPhoto(asset) {
+    $('lightImage').src=thumbUrl(asset,1600);
+    $('lightLabel').textContent=asset.context?.custom?.photographer?`Shared by ${asset.context.custom.photographer}`:'A wedding memory';
+    $('originalLink').href=downloadUrl(asset);
+    $('overlay').classList.remove('hidden');document.body.style.overflow='hidden';$('closeLight').focus();
+  }
+  function closePhoto() {$('overlay').classList.add('hidden');$('lightImage').removeAttribute('src');document.body.style.overflow='';}
+  $('closeLight').onclick=closePhoto;
+  $('overlay').addEventListener('click',e=>{if(e.target===$('overlay'))closePhoto();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closePhoto();});
+  function renderGallery() {
+    if(!galleryAccessible)return;
+    const byId=new Map();for(const asset of [...recent,...galleryAssets]){if(asset&&asset.public_id)byId.set(asset.public_id,asset);}
+    const all=[...byId.values()].sort((a,b)=>Date.parse(b.created_at||'')-Date.parse(a.created_at||''));
+    $('gallery').replaceChildren();$('empty').classList.toggle('hidden',all.length>0);
+    setGalleryStatus(`${all.length} shared photo${all.length===1?'':'s'}`);
+    for(const asset of all) {
+      const card=document.createElement('article');card.className='photo';
+      const btn=document.createElement('button');btn.className='thumb';btn.type='button';btn.setAttribute('aria-label','Open wedding photo');
+      const img=document.createElement('img');img.loading='lazy';img.decoding='async';img.alt='Photo shared by a wedding guest';img.src=thumbUrl(asset,600);
+      btn.append(img);btn.onclick=()=>viewPhoto(asset);
+      const row=document.createElement('div');row.className='photoMeta';
+      const from=document.createElement('span');from.textContent=asset.context?.custom?.photographer||'A wedding guest';
+      const save=document.createElement('button');save.textContent='View / save';save.type='button';save.onclick=()=>viewPhoto(asset);
+      row.append(from,save);card.append(btn,row);$('gallery').append(card);
+    }
+  }
+  async function loadGallery() {
+    $('refreshBtn').disabled=true;setGalleryStatus('Loading wedding memories…');
+    try {
+      const res=await fetch(`${LIST}?refresh=${Date.now()}`,{cache:'no-store'});
+      if(res.status===404) { galleryAccessible=true;galleryAssets=[];renderGallery();return; }
+      if(!res.ok) throw new Error(`Gallery service returned ${res.status}. The owner may need to enable Cloudinary's Resource list setting.`);
+      const json=await res.json();if(!Array.isArray(json.resources))throw new Error('The photo list was not in the expected format.');
+      galleryAccessible=true;galleryAssets=json.resources;renderGallery();
+    } catch(error) {
+      galleryAccessible=false;$('gallery').replaceChildren();$('empty').classList.add('hidden');
+      setGalleryStatus('The shared gallery is not available yet. The couple needs to finish its Cloudinary gallery setting. Photo uploading may still work.');
+      // Log technical detail for troubleshooting, without showing account details to guests.
+      console.warn('Shared album listing:',error);
+    } finally {$('refreshBtn').disabled=false;}
+  }
+  $('refreshBtn').onclick=loadGallery;
+  loadGallery();
+})();
+</script>
+</body>
+</html>
